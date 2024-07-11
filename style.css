@@ -7,15 +7,15 @@
 
 .top-left {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: -10px;
+    left: -10px;
     width: 200px;
 }
 
 .container {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg,#e52e71,#ff8a00);
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -31,16 +31,19 @@
     border-radius: 10px;
 }
 
-.Todo-list h1 {
-    color: #002765;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
 
 .Todo-list h1 img {
     width: 200px;
     margin-left: 10px;
+
+}
+
+.Todo-list h1 {
+    font-size: 54px; 
+    color: #0e0c0c; 
+    text-align: center; 
+    margin-bottom: 20px; 
+    font-family: 'Arial', sans-serif; 
 }
 
 .row {

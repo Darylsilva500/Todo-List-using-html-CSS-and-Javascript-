@@ -10,13 +10,13 @@ function addTask() {
 
     const li = document.createElement('li');
     li.textContent = taskInput.value;
-    li.addEventListener('click', toggleTask); // Add click listener for toggle
+    li.addEventListener('click', toggleTask); 
 
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'X';
     deleteBtn.className = 'delete-btn';
     deleteBtn.onclick = function(event) {
-        event.stopPropagation(); // Prevent li toggle when clicking delete button
+        event.stopPropagation(); 
         taskList.removeChild(li);
     };
 
@@ -26,7 +26,7 @@ function addTask() {
     taskInput.value = '';
 }
 
-// Function to toggle task completion
+
 function toggleTask() {
     this.classList.toggle('completed');
 }

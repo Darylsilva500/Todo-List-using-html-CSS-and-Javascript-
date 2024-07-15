@@ -21,6 +21,22 @@
     justify-content: center;
     align-items: center;
 }
+@keyframes twinkle {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                    0 0 20px rgba(255, 255, 255, 0.5),
+                    0 0 30px rgba(255, 255, 255, 0.5),
+                    0 0 40px rgba(255, 255, 255, 0.5),
+                    0 0 50px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.2),
+                    0 0 10px rgba(255, 255, 255, 0.2),
+                    0 0 15px rgba(255, 255, 255, 0.2),
+                    0 0 20px rgba(255, 255, 255, 0.2),
+                    0 0 25px rgba(255, 255, 255, 0.2);
+    }
+}
 
 .Todo-list {
     width: 100%;
@@ -29,7 +45,10 @@
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
+    border: 1px solid black; 
+    animation: twinkle 2s infinite;
 }
+
 
 
 .Todo-list h1 img {

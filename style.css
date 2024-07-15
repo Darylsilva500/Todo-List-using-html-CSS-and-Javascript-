@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
 * {
     margin: 0;
     padding: 0;
@@ -15,12 +17,13 @@
 .container {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(90deg,#e52e71,#ff8a00);
+    background: linear-gradient(90deg, #e52e71, #ff8a00);
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 @keyframes twinkle {
     0%, 100% {
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
@@ -41,25 +44,27 @@
 .Todo-list {
     width: 100%;
     max-width: 540px;
-    background: #fff;
+    background: transparent;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
-    border: 1px solid black; 
+    border: 2px solid white; 
     animation: twinkle 2s infinite;
 }
-
-
+.Todo-list h1 i{
+        margin-right: 10px; 
+        font-size: 1em; 
+    
+}
 
 .Todo-list h1 img {
     width: 200px;
     margin-left: 10px;
-
 }
 
 .Todo-list h1 {
     font-size: 54px; 
-    color: #0e0c0c; 
+    color: #fff; 
     text-align: center; 
     margin-bottom: 20px; 
     font-family: 'Arial', sans-serif; 
@@ -89,14 +94,14 @@ button {
     padding: 10px 20px;
     border: none;
     border-radius: 0 5px 5px 0;
-    background-color: #28a745;
+    background-color: #a75228;
     color: #fff;
     cursor: pointer;
     font-size: 16px;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #883621;
 } 
 
 ul {
@@ -105,31 +110,72 @@ ul {
     margin-top: 10px;
 }
 
-li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
     cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
+    color: #fff;
+    
 }
 
-li:last-child {
-    border-bottom: none;
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
 }
 
-.completed {
+ul li.completed {
     text-decoration: line-through;
-    color: #999;
+    color: #555;
+}
+
+ul li.completed::before {
+    background-image: url(images/checked.png);
 }
 
 .delete-btn {
     background-color: transparent;
-    color: #999;;
+    color: #fff;
     border: none;
     border-radius: none; 
     padding: 5px; 
     cursor: pointer;
     font-size: 16px;
+    margin-left: 350px; 
 }
+
+.delete-btn:hover {
+    background-color: transparent; 
+}
+.delete-all-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #a75228;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 20px; 
+    margin-left: 370px;
+}
+
+.delete-all-btn:hover {
+    background-color:  #883621;
+}
+
+.Todo-list h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-top: 20px; 
+}
+
 

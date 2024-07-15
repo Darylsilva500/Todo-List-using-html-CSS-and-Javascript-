@@ -143,6 +143,10 @@ ul li.completed::before {
 }
 
 .delete-btn {
+    position: absolute;
+    top: 50%;
+    left: 370px; 
+    transform: translate(-50%, -50%); 
     background-color: transparent;
     color: #fff;
     border: none;
@@ -150,8 +154,10 @@ ul li.completed::before {
     padding: 5px; 
     cursor: pointer;
     font-size: 16px;
-    margin-left: 350px; 
 }
+
+
+
 
 .delete-btn:hover {
     background-color: transparent; 
